@@ -70,7 +70,7 @@ class TodoApp extends React.Component {
   }
   
   handleEditTodoSubmit(event, todoItem){
-    if (event.keyCode != ENTER)return;
+    if (event.keyCode != ENTER && event.type !== "blur")return;
     todoItem.isEdited = false;
     this.updateTodoList(todoItem);
   }
@@ -101,7 +101,7 @@ class TodoApp extends React.Component {
                 <div className="d-flex justify-content-between  align-items-center">
                 <div className="d-flex align-items-center flex-fill">
                 <div >
-                <label for={todoItem.id}>
+                <label htmlFor={todoItem.id}>
                 <input
                   type="checkbox"
                   id={todoItem.id}
@@ -118,6 +118,7 @@ class TodoApp extends React.Component {
                     value={todoItem.item}
                     onChange={ (event) => this.handleEditTodoInput(event, todoItem)}
                     onKeyDown={ (event) => this.handleEditTodoSubmit(event, todoItem)}
+                    onBlur={(event) => this.handleEditTodoSubmit(event, todoItem)}
                     />
                     ) : ( 
                     <span 
