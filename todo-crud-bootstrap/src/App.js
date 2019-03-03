@@ -50,16 +50,19 @@ class TodoApp extends React.Component {
     this.filterTodoList();
   }
 
-  // Event Handler
-
-  handleAddTodoList(inputTodo) {
-    const todoItem = {
+  newTodoItem(input) {
+    return {
       id: shortid.generate(),
       isCompleted: false,
       isEdited: false,
-      item: inputTodo
+      item: input
     }
-    this.addTodoList(todoItem);
+  }
+  // Event Handler
+
+  // For AddTodo Component
+  handleAddTodoList(inputTodo) {
+    this.addTodoList(this.newTodoItem(inputTodo));
   }
 
   handleToggleTodoItem(todoItem) {
@@ -83,38 +86,38 @@ class TodoApp extends React.Component {
     this.updateTodoList(todoItem);
   }
 
-  async handleFilter(event){
+  async handleFilter(event) {
     const type = event.target.name;
     console.log("clicked " + type)
-    
+
     await this.setState({
       filter: type,
-      isFilter : {
-        SHOW_ALL: type === "SHOW_ALL"?false:true,
-        SHOW_ACTIVE: type === "SHOW_ACTIVE"?false:true,
-        SHOW_COMPLETED: type === "SHOW_COMPLETED"?false:true,
+      isFilter: {
+        SHOW_ALL: type === "SHOW_ALL" ? false : true,
+        SHOW_ACTIVE: type === "SHOW_ACTIVE" ? false : true,
+        SHOW_COMPLETED: type === "SHOW_COMPLETED" ? false : true,
       }
     });
     this.filterTodoList();
   }
-  
-  filterTodoList(){
-    if (this.state.filter === "SHOW_ALL"){
+
+  filterTodoList() {
+    if (this.state.filter === "SHOW_ALL") {
       this.setState(state => ({
         todoList: state.todoListData
       }));
-    }else if (this.state.filter === "SHOW_ACTIVE"){
+    } else if (this.state.filter === "SHOW_ACTIVE") {
       this.setState(state => ({
         todoList: state.todoListData.filter(todo => (todo.isCompleted === false))
       }));
-    }else if (this.state.filter === "SHOW_COMPLETED"){
+    } else if (this.state.filter === "SHOW_COMPLETED") {
       this.setState(state => ({
         todoList: state.todoListData.filter(todo => (todo.isCompleted === true))
       }));
     }
   }
 
-  componentDidMount(){
+  componentDidMount() {
     this.filterTodoList();
   }
 
@@ -172,8 +175,9 @@ class TodoApp extends React.Component {
                       onClick={() => this.deleteTodoList(todoItem)}>X</button>
                   </div>}
                 </div>
-              </li>)
-            )}
+              </li>
+
+            ))}
           </ul>
         </div>
 
