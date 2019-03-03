@@ -1,6 +1,7 @@
 import React from 'react';
 import shortid from 'shortid';
 import './App.css';
+import AddTodo from './components/AddTodo';
 
 const ENTER = 13;
 
@@ -15,7 +16,6 @@ class TodoApp extends React.Component {
     this.state = {
       todoListData,
       todoList: [],
-      inputTodo: "",
       currentTodoItem: initialTodoItem,
       filter: "SHOW_ALL",
       isFilter: {
@@ -24,13 +24,14 @@ class TodoApp extends React.Component {
         SHOW_COMPLETED: true,
       },
     };
+
+    this.handleAddTodoList = this.handleAddTodoList.bind(this);
   }
 
   // CRUD
   addTodoList(todoItem) {
     this.setState(state => ({
-      todoListData: [...state.todoListData, todoItem],
-      inputTodo: ""
+      todoListData: [...state.todoListData, todoItem]
     }));
     this.filterTodoList();
   }
@@ -51,18 +52,15 @@ class TodoApp extends React.Component {
 
   // Event Handler
 
-  handleAddTodoList() {
-    if (this.state.inputTodo === "") return;
+  handleAddTodoList(inputTodo) {
     const todoItem = {
       id: shortid.generate(),
       isCompleted: false,
       isEdited: false,
-      item: this.state.inputTodo
+      item: inputTodo
     }
     this.addTodoList(todoItem);
-    this.setState({ inputTodo: "" });
   }
-
 
   handleToggleTodoItem(todoItem) {
     todoItem.isCompleted = !todoItem.isCompleted;
@@ -124,20 +122,9 @@ class TodoApp extends React.Component {
     return (
       <div className="container">
         <h1>Todo App</h1>
-        <div className="d-flex justify-content-start">
-          <input
-            className="form-control"
-            type="text"
-            placeholder="What you want to do?"
-            value={this.state.inputTodo}
-            onChange={(event) => this.setState({ inputTodo: event.target.value })}
-            onKeyDown={(event) => event.keyCode === ENTER ? this.handleAddTodoList() : null} />
-          <button
-            className="btn btn-primary"
-            type="button"
-            onClick={() => this.handleAddTodoList()}
-          >Add</button>
-        </div>
+        <AddTodo
+          handleAddTodoList={this.handleAddTodoList}
+        />
 
         <div className="card">
           <ul className="list-group list-group-flush">
