@@ -1713,6 +1713,11 @@ base@^0.11.1:
     mixin-deep "^1.2.0"
     pascalcase "^0.1.1"
 
+basic-react-store@^0.0.2:
+  version "0.0.2"
+  resolved "https://registry.yarnpkg.com/basic-react-store/-/basic-react-store-0.0.2.tgz#18d2887d139b86c464aaf18dff0d974a96c68d19"
+  integrity sha512-5g1rjwe9Fp95aoFAUlZbucf6E7zvE8ufDBzKvcnCsVKAZtkFs7thmuSftlPD7S6lsdEbzCdLfrT9g0VuXqApyw==
+
 batch@0.6.1:
   version "0.6.1"
   resolved "https://registry.yarnpkg.com/batch/-/batch-0.6.1.tgz#dc34314f4e679318093fc760272525f94bf25c16"

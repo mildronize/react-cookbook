@@ -1,11 +1,10 @@
 import React from 'react';
-import store from '../../store';
+import { connect } from 'basic-react-store';
 
 class Todo extends React.Component {
 
     render() {
-        const root = store.getRoot();
-        const { todo } = this.props;
+        const { todo, root } = this.props;
         return (
             <li
                 className={todo.isCompleted && `todo-checked`}
@@ -34,7 +33,7 @@ class Todo extends React.Component {
     }
 }
 
-export default Todo;
+export default connect(Todo);
 
 
 

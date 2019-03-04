@@ -1,5 +1,5 @@
 import React from 'react';
-import store from '../store';
+import { connect } from 'basic-react-store';
 
 class Filter extends React.Component {
 
@@ -13,7 +13,7 @@ class Filter extends React.Component {
 
     handleFilter(event){
         const type = event.target.name;
-        const root = store.getRoot();
+        const root = this.props.root;
         this.setState({
             isFilter: {
                 SHOW_ALL: type === "SHOW_ALL" ? false : true,
@@ -49,4 +49,4 @@ class Filter extends React.Component {
     }
 }
 
-export default Filter;
+export default connect(Filter);

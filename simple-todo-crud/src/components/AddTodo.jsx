@@ -1,5 +1,5 @@
 import React from 'react';
-import store from '../store';
+import { connect } from 'basic-react-store';
 
 class AddTodo extends React.Component {
 
@@ -8,7 +8,7 @@ class AddTodo extends React.Component {
     }
 
     handleSubmit(event){
-        const root = store.getRoot()
+        const root = this.props.root
         if(this.state.input === "") return;
         if (!(event.type === "click" || ( event.type === "keydown" && event.keyCode === 13))) return;
         root.handleAddTodo(this.state.input);
@@ -34,4 +34,4 @@ class AddTodo extends React.Component {
     }
 }
 
-export default AddTodo;
+export default connect(AddTodo);
