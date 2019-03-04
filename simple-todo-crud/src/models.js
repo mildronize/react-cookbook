@@ -19,7 +19,6 @@ export class TodoModel{
         this.id = shortid.generate()
         this.item = item
         this.isCompleted = false
-        this.isEdited = false
       }
 
     get(){
