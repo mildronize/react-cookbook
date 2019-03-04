@@ -1,6 +1,7 @@
 import React from 'react';
 import AddTodo from './components/AddTodo';
 import TodoList from './components/Todos/TodoList';
+import Filter from './components/Filter';
 import store from './store';
 import shortid from 'shortid';
 // import { TodoListModel, TodoModel } from './models';
@@ -17,7 +18,8 @@ class App extends React.Component {
 
         this.state = {
             todoListData,
-            todos: []
+            todos: [],
+            filter: "SHOW_ALL"
         };
     }
 
@@ -73,6 +75,16 @@ class App extends React.Component {
         this.updateTodoList(todoItem);
     }
 
+
+    // Filter
+
+    async handleFilter(event) {
+        await this.setState({
+            filter: event.target.name
+        });
+        this.updateView();
+    }
+
     //  render
 
     componentDidMount() {
@@ -80,9 +92,19 @@ class App extends React.Component {
     }
 
     updateView() {
-        this.setState(state => ({
-            todos: state.todoListData
-        }));
+        if (this.state.filter === "SHOW_ALL") {
+            this.setState(state => ({
+                todos: state.todoListData
+            }));
+        } else if (this.state.filter === "SHOW_ACTIVE") {
+            this.setState(state => ({
+                todos: state.todoListData.filter(todo => (todo.isCompleted === false))
+            }));
+        } else if (this.state.filter === "SHOW_COMPLETED") {
+            this.setState(state => ({
+                todos: state.todoListData.filter(todo => (todo.isCompleted === true))
+            }));
+        }
     }
 
 
@@ -92,6 +114,7 @@ class App extends React.Component {
                 <h1>Todo App</h1>
                 <AddTodo />
                 <TodoList todos={this.state.todos} />
+                <Filter />
             </div>
         )
     }
