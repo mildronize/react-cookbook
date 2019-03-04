@@ -3,14 +3,11 @@ import store from '../store';
 
 class Filter extends React.Component {
 
-    constructor(props){
-        super(props);
-        this.state = {
-            isFilter: {
-                SHOW_ALL: false,
-                SHOW_ACTIVE: true,
-                SHOW_COMPLETED: true,
-            }
+    state = {
+        isFilter: {
+            SHOW_ALL: false,
+            SHOW_ACTIVE: true,
+            SHOW_COMPLETED: true,
         }
     }
 

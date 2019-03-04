@@ -3,11 +3,8 @@ import store from '../store';
 
 class AddTodo extends React.Component {
 
-    constructor(props) {
-        super(props);
-        this.state = {
-            input: ""
-        }
+    state = {
+        input: ""
     }
 
     handleSubmit(event){
