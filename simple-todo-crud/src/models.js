@@ -1,7 +1,7 @@
 import shortid from 'shortid';
 
 export class TodoListModel{
-    constructor(item = "") {
+    constructor() {
         this.todos = []
       }
 
@@ -10,8 +10,9 @@ export class TodoListModel{
     }
 
     get(){
-        return this.todos;
+        return this.todos.map(todo => (todo.get()));
     }
+
 }
 
 export class TodoModel{

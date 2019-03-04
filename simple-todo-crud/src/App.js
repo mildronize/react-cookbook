@@ -34,6 +34,7 @@ class App extends React.Component {
         }));
     }
 
+
     render() {
         return (
             <div>
@@ -41,8 +42,8 @@ class App extends React.Component {
                 <AddTodo />
                 <ul>
                     {this.state.todos.map(todo => (
-                        <li key={todo.get().id}>
-                            {todo.get().item}
+                        <li key={todo.id}>
+                            {todo.item}
                         </li>
                     ))}
                 </ul>
