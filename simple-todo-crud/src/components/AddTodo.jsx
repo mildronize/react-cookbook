@@ -1,5 +1,5 @@
 import React from 'react';
-import { connect } from 'basic-react-store';
+import { connect } from 'store';
 
 class AddTodo extends React.Component {
 

@@ -2,7 +2,7 @@ import React from 'react';
 import AddTodo from './components/AddTodo';
 import TodoList from './components/Todos/TodoList';
 import Filter from './components/Filter';
-import store from 'basic-react-store';
+import store from 'store';
 import shortid from 'shortid';
 // import { TodoListModel, TodoModel } from './models';
 import './App.css';
