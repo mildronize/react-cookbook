@@ -12,21 +12,21 @@ class Todo extends React.Component {
                 < input
                     type="checkbox"
                     checked={todo.isCompleted}
-                    onChange={() => root.handleToggleTodo(todo)} />
+                    onChange={() => root.onToggleTodo(todo)} />
                 {todo.isEdited ? (
                     <input
                         autoFocus
                         type="text"
                         value={todo.item}
-                        onChange={(e) => root.handleEditTodoInput(e, todo)}
-                        onKeyDown={(e) => root.handleEditTodoSubmit(e, todo)}
-                        onBlur={(e) => root.handleEditTodoSubmit(e, todo)}
+                        onChange={(e) => root.onEditTodoInput(e, todo)}
+                        onKeyDown={(e) => root.onEditTodoSubmit(e, todo)}
+                        onBlur={(e) => root.onEditTodoSubmit(e, todo)}
                     />
                 ) : (
-                        <span onClick={() => root.handleToggleEditMode(todo)}>{todo.item}</span>
+                        <span onClick={() => root.onToggleEditMode(todo)}>{todo.item}</span>
                     )
                 }
-                <button onClick={() => root.handleToggleEditMode(todo)}>edit</button>
+                <button onClick={() => root.onToggleEditMode(todo)}>edit</button>
                 <button onClick={() => root.deleteTodoList(todo)}>delete</button>
             </li>
         )

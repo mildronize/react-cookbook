@@ -47,29 +47,29 @@ class App extends React.Component {
 
     // event
 
-    handleAddTodo(input) {
+    onAddTodo(input) {
         this.addTodoList({
             id: shortid.generate(), isCompleted: false, item: input, isEdited: false
         })
         this.updateView();
     }
 
-    handleToggleTodo(todo) {
+    onToggleTodo(todo) {
         todo.isCompleted = !todo.isCompleted;
         this.updateTodoList(todo);
     }
 
-    handleToggleEditMode(todo) {
+    onToggleEditMode(todo) {
         todo.isEdited = !todo.isEdited;
         this.updateTodoList(todo);
     }
 
-    handleEditTodoInput(event, todoItem) {
+    onEditTodoInput(event, todoItem) {
         todoItem.item = event.target.value;
         this.updateTodoList(todoItem);
     }
 
-    handleEditTodoSubmit(event, todoItem) {
+    onEditTodoSubmit(event, todoItem) {
         if (event.keyCode != 13 && event.type !== "blur") return;
         todoItem.isEdited = false;
         this.updateTodoList(todoItem);
@@ -78,7 +78,7 @@ class App extends React.Component {
 
     // Filter
 
-    async handleFilter(event) {
+    async onFilter(event) {
         await this.setState({
             filter: event.target.name
         });
