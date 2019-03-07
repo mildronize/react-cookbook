@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import './App.css';
-import AddTodo from './components/AddTodo.container';
-import TodoList from './components/TodoList.container';
+import AddTodo from './components/AddTodo';
+import TodoList from './components/TodoList';
 
 class App extends Component {
 

@@ -1,26 +1,9 @@
 import React from 'react'
-import { connect } from 'react-redux';
-import {
-    editTodo,
-    toggleEditTodo,
-    toggleTodo,
-    deleteTodo,
-    exitEditTodo
-} from '../actions';
-
-const mapStateToProps = null;
-const mapDispatchToProps = {
-    editTodo,
-    toggleEditTodo,
-    toggleTodo,
-    deleteTodo,
-    exitEditTodo
-}
 
 class Todo extends React.Component {
 
     render() {
-        const { todo } = this.props;
+        const { todo  } = this.props;
         return (
             <li
                 className={todo.isCompleted && `todo-checked`}
@@ -35,7 +18,7 @@ class Todo extends React.Component {
                         type="text"
                         value={todo.text}
                         onChange={(e) => this.props.editTodo(todo.id, e.target.value)}
-                        onKeyDown={(e) => e.target.value === 13 ? this.props.exitEditTodo(todo.id) : null}
+                        onKeyDown={(e) => e.target.value === 13 ? this.props.exitEditTodo(todo.id):null}
                         onBlur={() => this.props.exitEditTodo(todo.id)}
                     />
                 ) : (
@@ -50,4 +33,4 @@ class Todo extends React.Component {
 
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(Todo);
+export default Todo  
