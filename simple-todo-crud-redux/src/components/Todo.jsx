@@ -22,20 +22,18 @@ class Todo extends React.Component {
     render() {
         const { todo } = this.props;
         return (
-            <li
-                className={todo.isCompleted && `todo-checked`}
-            >
+            <li className={todo.isCompleted && `todo-checked`} >
                 < input
                     type="checkbox"
                     checked={todo.isCompleted}
-                    onChange={() => this.props.toggleTodo(todo)} />
+                    onChange={() => this.props.toggleTodo(todo.id)} />
                 {todo.isEdited ? (
                     <input
                         autoFocus
                         type="text"
                         value={todo.text}
                         onChange={(e) => this.props.editTodo(todo.id, e.target.value)}
-                        onKeyDown={(e) => e.target.value === 13 ? this.props.exitEditTodo(todo.id) : null}
+                        onKeyDown={(e) => e.keyCode === 13 ? this.props.exitEditTodo(todo.id) : null}
                         onBlur={() => this.props.exitEditTodo(todo.id)}
                     />
                 ) : (

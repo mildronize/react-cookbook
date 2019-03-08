@@ -32,3 +32,18 @@ export const exitEditTodo = (id) => ({
     type: 'EXIT_EDIT_TODO',
     id
 })
+
+// filters
+
+export const setVisibilityFilter = (filter) => ({
+    type: 'SET_VISIBILITY_FILTER',
+    filter
+})
+
+// type
+
+export const visibilityFilters = {
+    SHOW_ALL: 'SHOW_ALL',
+    SHOW_ACTIVE: 'SHOW_ACTIVE',
+    SHOW_COMPLETED: 'SHOW_COMPLETED'
+}

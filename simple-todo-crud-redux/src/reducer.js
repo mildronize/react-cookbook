@@ -1,4 +1,5 @@
 import { combineReducers } from 'redux';
+import { visibilityFilters } from './actions';
 let _id = 0;
 
 export const uniqueId = () => _id++;
@@ -50,7 +51,16 @@ const todos = (state = [], action) => {
     }
 }
 
+const visibilityFilter = (state = visibilityFilters.SHOW_ALL, action) => {
+    switch(action.type){
+        case 'SET_VISIBILITY_FILTER':
+            return action.filter;
+        default:
+            return state;
+    }
+}
 
 export default combineReducers({
-    todos
+    todos,
+    visibilityFilter
 })
