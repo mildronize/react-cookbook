@@ -3,11 +3,11 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "cross-env": "^5.2.0",
-    "react": "^16.8.3",
-    "react-dom": "^16.8.3",
-    "react-scripts": "2.1.5",
-    "shortid": "^2.2.14"
+    "cross-env": "^7.0.2",
+    "react": "^16.14.0",
+    "react-dom": "^16.14.0",
+    "react-scripts": "3.4.3",
+    "shortid": "^2.2.15"
   },
   "scripts": {
     "start": "cross-env NODE_PATH=src react-scripts start",
