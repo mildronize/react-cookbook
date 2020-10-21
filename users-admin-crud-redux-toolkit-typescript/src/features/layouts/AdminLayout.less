@@ -1,0 +1,46 @@
+@import "../../app/App.less";
+
+@text-color-navbar: #ffffff;
+
+.background{
+    background-color: @layout-body-background;
+    height: 100vh;
+}
+
+.logo {
+  width: 60px;
+  height: 31px;
+  background: rgba(255, 255, 255, 0.2);
+  margin: 16px 24px 16px 0;
+  float: left;
+}
+
+.rightMenu {
+  margin-left: auto;
+}
+
+.trigger {
+  padding: 0 24px;
+  font-size: 18px;
+  cursor: pointer;
+  transition: color 0.3s;
+  color: @text-color-navbar;
+}
+
+.trigger:hover {
+  color: #1890ff;
+}
+
+
+
+
+@media (max-width: @screen-sm) {
+  .ant-layout-header{
+    padding: 0 !important;
+  }
+
+  .ant-menu-item-selected{
+    background-color: #eee !important;
+  }
+
+}
