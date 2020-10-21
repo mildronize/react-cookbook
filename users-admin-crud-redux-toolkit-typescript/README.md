@@ -21,6 +21,8 @@ yarn dev
 
 ![](./preview-read.png)
 
+<!-- more -->
+
 ### delete 
 
 ![](./preview-delete.png)
@@ -34,6 +36,7 @@ yarn dev
 `src/features/admin/users/UsersEditForm.tsx`
 
 ![](./preview-update.png)
+
 
 
 ## Command

@@ -4,4 +4,6 @@
 
 [Live Preview by codesandbox](https://codesandbox.io/s/github/mildronize/react-apps/tree/master/counter-redux-toolkit-typescript)
 
+<!-- more -->
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
