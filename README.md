@@ -7,6 +7,7 @@
 - 005-simple-todo-crud-redux
 - 006-counter-redux-toolkit-typescript
 - 007-users-admin-crud-redux-toolkit-typescript
+- 008-reuse-react-component-with-generic-props-typescript
 
 
 ---
@@ -92,6 +93,28 @@ yarn dev
 `src/features/admin/users/UsersPage.tsx`
 
 ![007-users-admin-crud-redux-toolkit-typescript preview](007-users-admin-crud-redux-toolkit-typescript/./preview-read.png)
+
+
+
+---
+
+
+
+`008-reuse-react-component-with-generic-props-typescript`
+
+## Reusable React Component with Generic Props (Typescript)
+
+This app demonstrate the component for display table of the different data .
+
+### Features
+- 1 Display Table Component
+- 2 Interface of data type 
+- Reuse them with only one component
+
+[Live Preview by Codesandbox](https://codesandbox.io/s/github/mildronize/react-apps/tree/master/008-reuse-react-component-with-generic-props-typescript)
+
+### Screenshot
+![008-reuse-react-component-with-generic-props-typescript preview](008-reuse-react-component-with-generic-props-typescript/preview.png)
 
 
 
