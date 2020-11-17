@@ -1,0 +1,19 @@
+th, tr, td {
+  border: 1px solid black;
+  padding: 15px;
+}
+
+th{
+  background-color: #eeeeee;
+}
+
+.container{
+  margin: 0 auto;
+  max-width: 1000px;
+}
+
+.editableCell {
+  border: none;
+  width: 100%;
+  padding: 10;
+}

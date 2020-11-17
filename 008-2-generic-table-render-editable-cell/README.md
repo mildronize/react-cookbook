@@ -1,5 +1,5 @@
 
-## Reusable React Component with Generic Props (Typescript)
+## Editable Cell: Reusable React Component with Generic Props (Typescript)
 
 This app demonstrate the component for display table of the different data .
 
@@ -7,8 +7,9 @@ This app demonstrate the component for display table of the different data .
 - 1 Display Table Component
 - 2 Interface of data type 
 - Reuse them with only one component
+- Editable Cell
 
-[Live Preview by Codesandbox](https://codesandbox.io/s/github/mildronize/react-apps/tree/master/008-1-generic-table-render-reuse-react-component-with-generic-props-typescript)
+[Live Preview by Codesandbox](https://codesandbox.io/s/github/mildronize/react-apps/tree/master/008-2-generic-table-render-editable-cell)
 
 ### Screenshot
 ![](preview.png)
@@ -29,9 +30,13 @@ const posts: Post[] = [
   { id: 1, title: "Post 2", body: "Post content 2" },
 ];
 
+// useState Hook
+const [data, setData] = React.useState(() => users); 
+
 // JSX
 <Table<Post>
-  objects={posts}
+  setData={setData}
+  rows={data}
   columns={[
     { key: "title", title: "Title" },
     { key: "body", title: "Body" },
@@ -44,6 +49,7 @@ const posts: Post[] = [
 
 Specially thanks: https://wanago.io/2020/03/09/functional-react-components-with-generic-props-in-typescript/
 
+Inspire from https://react-table.tanstack.com/docs/examples/editable-data
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
