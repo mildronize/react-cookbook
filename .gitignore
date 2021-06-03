@@ -8,6 +8,7 @@ dist
 lib
 es
 coverage
+yarn.lock
 
 # testing
 /coverage
