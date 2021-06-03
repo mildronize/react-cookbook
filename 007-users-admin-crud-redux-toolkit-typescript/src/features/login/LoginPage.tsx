@@ -26,7 +26,7 @@ const LoginPage = ({ message }: AppProps) => {
     <Layout>
       <Row justify="space-around" align="middle" className="center-wrapper">
         <Col>
-        <Row justify="center"><h1>PSUIC - Project System</h1></Row>
+        <Row justify="center"><h1>Login Page</h1></Row>
           <Form
             {...layout}
             name="basic"

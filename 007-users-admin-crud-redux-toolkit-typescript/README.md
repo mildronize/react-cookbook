@@ -14,6 +14,8 @@
 yarn dev
 ```
 
+Go to `http://localhost:3000/users`
+
 ## Screenshot
 
 ### Read 
