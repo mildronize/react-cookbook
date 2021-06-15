@@ -1,61 +1,16 @@
 # React App Collections
 
-- 1-generic-table-render-reuse-react-component-with-generic-props-typescript
-- 2-generic-table-render-editable-cell
 - counter-redux-toolkit-typescript
 - fetch-container-ssr-like
 - fetch-container-ssr-like-hoc
+- generic-table-render-editable-cell-2
+- generic-table-render-reuse-react-component-with-generic-props-typescript-1
 - guessnumber-hook
 - simple-todo-crud
 - simple-todo-crud-pure-store
 - simple-todo-crud-redux
 - todo-crud-bootstrap
 - users-admin-crud-redux-toolkit-typescript
-
-
----
-
-
-
-`1-generic-table-render-reuse-react-component-with-generic-props-typescript`
-
-## Reusable React Component with Generic Props (Typescript)
-
-This app demonstrate the component for display table of the different data .
-
-### Features
-- 1 Display Table Component
-- 2 Interface of data type 
-- Reuse them with only one component
-
-[Live Preview by Codesandbox](https://codesandbox.io/s/github/mildronize/react-apps/tree/master/008-1-generic-table-render-reuse-react-component-with-generic-props-typescript)
-
-### Screenshot
-![1-generic-table-render-reuse-react-component-with-generic-props-typescript preview](1-generic-table-render-reuse-react-component-with-generic-props-typescript/preview.png)
-
-
-
----
-
-
-
-`2-generic-table-render-editable-cell`
-
-## Editable Cell: Reusable React Component with Generic Props (Typescript)
-
-This app demonstrate the component for display table of the different data .
-
-### Features
-- 1 Display Table Component
-- 2 Interface of data type 
-- Reuse them with only one component
-- Editable Cell
-
-[Live Preview by Codesandbox](https://codesandbox.io/s/github/mildronize/react-apps/tree/master/008-2-generic-table-render-editable-cell)
-
-### Screenshot
-![2-generic-table-render-editable-cell preview](2-generic-table-render-editable-cell/preview.png)
-
 
 
 ---
@@ -175,6 +130,51 @@ You don’t have to ever use `eject`. The curated feature set is suitable for sm
 You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
 To learn React, check out the [React documentation](https://reactjs.org/).
+
+
+---
+
+
+
+`generic-table-render-editable-cell-2`
+
+## Editable Cell: Reusable React Component with Generic Props (Typescript)
+
+This app demonstrate the component for display table of the different data .
+
+### Features
+- 1 Display Table Component
+- 2 Interface of data type 
+- Reuse them with only one component
+- Editable Cell
+
+[Live Preview by Codesandbox](https://codesandbox.io/s/github/mildronize/react-apps/tree/master/008-2-generic-table-render-editable-cell)
+
+### Screenshot
+![generic-table-render-editable-cell-2 preview](generic-table-render-editable-cell-2/preview.png)
+
+
+
+---
+
+
+
+`generic-table-render-reuse-react-component-with-generic-props-typescript-1`
+
+## Reusable React Component with Generic Props (Typescript)
+
+This app demonstrate the component for display table of the different data .
+
+### Features
+- 1 Display Table Component
+- 2 Interface of data type 
+- Reuse them with only one component
+
+[Live Preview by Codesandbox](https://codesandbox.io/s/github/mildronize/react-apps/tree/master/008-1-generic-table-render-reuse-react-component-with-generic-props-typescript)
+
+### Screenshot
+![generic-table-render-reuse-react-component-with-generic-props-typescript-1 preview](generic-table-render-reuse-react-component-with-generic-props-typescript-1/preview.png)
+
 
 
 ---
